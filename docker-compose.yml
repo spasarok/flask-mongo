@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mongo:
+    environment:
+      MONGO_INITDB_DATABASE: test_db
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_ROOT_USERNAME: root
+    image: mongo:latest
+    ports:
+      - 4000:27017
+    volumes:
+      - ./etc/fixtures.js:/docker-entrypoint-initdb.d/fixtures.js
