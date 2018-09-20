@@ -1,6 +1,6 @@
 db.users.insert([
   {
-    "_id": "z003f37",
+    "_id": "0",
     "name": "Kim"
   },
   {
