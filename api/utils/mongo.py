@@ -1,6 +1,5 @@
 import os
 
-from flask_pymongo import PyMongo
 from flask_mongoengine import MongoEngine
 
 from api.main import app
@@ -18,9 +17,6 @@ mongo_uri = 'mongodb://{user}:{passw}@{host}:{port}/{name}?authSource=admin'.for
     port = db_port,
     name = db_name
 )
-
-app.config['MONGO_URI'] = mongo_uri
-mongo = PyMongo(app)
 
 app.config['MONGODB_SETTINGS'] = {
     'host': mongo_uri
