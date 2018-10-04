@@ -10,7 +10,7 @@ def get_users(request_args=None):
 
 def get_user_by_id(id, request_args=None):
     result = User.objects.get_or_404(_id=id, **request_args.to_dict())
-    return result
+    return result.to_json()
 
 def post_user(request_args=None):
     try:

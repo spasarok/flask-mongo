@@ -23,7 +23,7 @@ virtualenv -p $(which python3) ~/venv/flask-mongo
 Activate your virtual environment.
 
 ```
-source ~/venv/flask-mongo
+source ~/venv/flask-mongo/bin/activate
 ```
 
 Install project requirements.
