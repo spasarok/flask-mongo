@@ -6,12 +6,12 @@ from api.main import app
 from api.controllers.users import get_users, get_user_by_id, post_user
 
 @app.route('/users', methods=['GET', 'POST'])
-def users(id=None):
+def users():
     if request.method == 'GET':
         return get_users(request.args)
     elif request.method == 'POST':
         return post_user(request.form)
 
 @app.route('/users/<int:id>', methods=['GET'])
-def users_id(id):
+def users_by_id(id):
     return get_user_by_id(id, request.args)
