@@ -1,8 +1,16 @@
+# Flask-Mongo
+
+A REST API powered by Flask and MongoDB.
+
 # Requirements
 
 * Docker
 * Python 3
 * Virtualenv (or your preferred Python environment)
+
+## Suggested Tools
+
+* Robo3T
 
 # Setup
 
@@ -35,10 +43,6 @@ python -m api.main
 ```
 
 ## Docker
-
-This project uses Docker to run a local MongoDB instance.
-
-### Commands
 
 Start MongoDB in a docker container.
 
