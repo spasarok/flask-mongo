@@ -36,10 +36,16 @@ pip install -r requirements.txt
 
 ## App
 
+Add the app to your Python path.
+
+```
+export PYTHONPATH=$(pwd)
+```
+
 Run the app at `localhost:5000`.
 
 ```
-python -m api.main
+python api/main.py
 ```
 
 ## Docker

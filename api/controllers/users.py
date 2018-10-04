@@ -4,11 +4,11 @@ from mongoengine.errors import ValidationError
 from api.schemas import User
 from api.utils.mongo import db
 
-def get_users(request_args=None):
-    result = User.objects.get_or_404(**request_args.to_dict())
+def get_users(request_args):
+    result = User.objects(**request_args.to_dict())
     return result.to_json()
 
-def get_user_by_id(id, request_args=None):
+def get_user_by_id(id, request_args):
     result = User.objects.get_or_404(_id=id, **request_args.to_dict())
     return result.to_json()
 

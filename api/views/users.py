@@ -13,5 +13,5 @@ def users(id=None):
         return post_user(request.form)
 
 @app.route('/users/<int:id>', methods=['GET'])
-def get_user_by_id(id):
-    return get_user(id, request.args)
+def users_id(id):
+    return get_user_by_id(id, request.args)
